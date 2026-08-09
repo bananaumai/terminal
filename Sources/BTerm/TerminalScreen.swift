@@ -3,7 +3,7 @@ import AppKit
 import SwiftUI
 
 struct TerminalScreen: NSViewRepresentable {
-    @Environment(\.colorScheme) private var colorScheme
+    let colorScheme: ColorScheme
 
     func makeCoordinator() -> Coordinator {
         Coordinator()

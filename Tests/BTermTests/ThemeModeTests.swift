@@ -8,7 +8,13 @@ final class ThemeModeTests: XCTestCase {
         XCTAssertEqual(ThemeMode.dark.rawValue, "dark")
     }
 
-    func testSystemDoesNotForceAColorScheme() {
-        XCTAssertNil(ThemeMode.system.preferredColorScheme)
+    func testAutoAlwaysResolvesFromCurrentSystemAppearance() {
+        XCTAssertEqual(ThemeMode.system.resolve(systemColorScheme: .dark), .dark)
+        XCTAssertEqual(ThemeMode.system.resolve(systemColorScheme: .light), .light)
+    }
+
+    func testReturningFromDarkToAutoRestoresSystemLightAppearance() {
+        XCTAssertEqual(ThemeMode.dark.resolve(systemColorScheme: .light), .dark)
+        XCTAssertEqual(ThemeMode.system.resolve(systemColorScheme: .light), .light)
     }
 }

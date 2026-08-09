@@ -15,9 +15,9 @@ enum ThemeMode: String, CaseIterable, Identifiable {
         }
     }
 
-    var preferredColorScheme: ColorScheme? {
+    func resolve(systemColorScheme: ColorScheme) -> ColorScheme {
         switch self {
-        case .system: nil
+        case .system: systemColorScheme
         case .light: .light
         case .dark: .dark
         }

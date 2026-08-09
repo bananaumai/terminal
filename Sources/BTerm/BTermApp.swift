@@ -10,8 +10,7 @@ struct BTermApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TerminalScreen()
-                .preferredColorScheme(themeMode.preferredColorScheme)
+            TerminalRoot(themeMode: themeMode)
                 .frame(minWidth: 640, minHeight: 400)
         }
         .defaultSize(width: 900, height: 580)
@@ -24,6 +23,15 @@ struct BTermApp: App {
                 .frame(width: 360)
                 .padding(24)
         }
+    }
+}
+
+private struct TerminalRoot: View {
+    @Environment(\.colorScheme) private var systemColorScheme
+    let themeMode: ThemeMode
+
+    var body: some View {
+        TerminalScreen(colorScheme: themeMode.resolve(systemColorScheme: systemColorScheme))
     }
 }
 
