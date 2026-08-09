@@ -79,7 +79,7 @@ struct TerminalScreen: NSViewRepresentable {
 
         nonisolated func setTerminalTitle(source: LocalProcessTerminalView, title: String) {
             DispatchQueue.main.async {
-                source.window?.title = title.isEmpty ? "BTerm" : title
+                source.window?.title = title.isEmpty ? "tm" : title
             }
         }
 

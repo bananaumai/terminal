@@ -5,13 +5,17 @@
     <key>CFBundleDevelopmentRegion</key>
     <string>en</string>
     <key>CFBundleExecutable</key>
-    <string>BTerm</string>
+    <string>tm</string>
     <key>CFBundleIdentifier</key>
-    <string>local.yuta.bterm</string>
+    <string>local.yuta.tm</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
-    <string>BTerm</string>
+    <string>tm</string>
+    <key>CFBundleDisplayName</key>
+    <string>tm</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>

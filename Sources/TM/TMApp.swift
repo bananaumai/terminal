@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct BTermApp: App {
+struct TMApp: App {
     @AppStorage("themeMode") private var storedThemeMode = ThemeMode.system.rawValue
 
     private var themeMode: ThemeMode {

@@ -1,5 +1,5 @@
 import XCTest
-@testable import BTerm
+@testable import TM
 
 final class ThemeModeTests: XCTestCase {
     func testStoredValuesRemainStable() {

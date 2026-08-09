@@ -3,23 +3,23 @@
 import PackageDescription
 
 let package = Package(
-    name: "BTerm",
+    name: "tm",
     platforms: [.macOS(.v14)],
     products: [
-        .executable(name: "BTerm", targets: ["BTerm"])
+        .executable(name: "tm", targets: ["TM"])
     ],
     dependencies: [
         .package(url: "https://github.com/migueldeicaza/SwiftTerm.git", branch: "main")
     ],
     targets: [
         .executableTarget(
-            name: "BTerm",
+            name: "TM",
             dependencies: ["SwiftTerm"],
             swiftSettings: [.swiftLanguageMode(.v5)]
         ),
         .testTarget(
-            name: "BTermTests",
-            dependencies: ["BTerm"]
+            name: "TMTests",
+            dependencies: ["TM"]
         )
     ]
 )

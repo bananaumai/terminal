@@ -1,11 +1,11 @@
-# BTerm
+# tm
 
 A deliberately small macOS terminal. It runs your login shell and follows the macOS Light/Dark appearance automatically.
 
 ## Run during development
 
 ```sh
-swift run BTerm
+swift run tm
 ```
 
 Open `Package.swift` in Xcode if you prefer Xcode's Run button.
@@ -15,14 +15,14 @@ Open `Package.swift` in Xcode if you prefer Xcode's Run button.
 ```sh
 chmod +x Scripts/build-app.sh
 Scripts/build-app.sh
-open dist/BTerm.app
+open dist/tm.app
 ```
 
 The resulting app is ad-hoc signed and intended for personal use. If macOS blocks the first launch, Control-click the app and choose Open.
 
 ## Automatic theme
 
-BTerm defaults to **Auto**, which follows the current macOS appearance without private APIs or extra permissions. In **System Settings → Appearance**, select **Auto**. macOS will then change appearance through the day and BTerm updates its terminal palette immediately.
+tm defaults to **Auto**, which follows the current macOS appearance without private APIs or extra permissions. In **System Settings → Appearance**, select **Auto**. macOS will then change appearance through the day and tm updates its terminal palette immediately.
 
 You can override this from **Theme → Light/Dark**, or return to **Theme → Auto**.
 
